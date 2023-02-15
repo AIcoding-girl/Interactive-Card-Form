@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+/* Prevent adjustments of font size after orientation change in IE on Windows Phone and in iOS */
+ html {
+    -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;
+}
+
+/* apply a natural box layout model to all elements */
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:root {
+    --white-color: hsl(0, 0%, 100%);
+    --light-gray: hsl(270, 3%, 87%);
+    --very-dark-violet: hsl(278, 68%, 11%);
+
+    --full-width: 100%;
+    --full-height: 100%;
+
+    --default-border-radius: 8px;
+
+    --font-size-10: 10px;
+    --font-size-14: 14px;
+
+    --spacing-8: 8px;
+    --spacing-10: 10px;
+    --spacing-12: 12px;
+    --spacing-14: 14px;
+    --spacing-16: 16px;
+    --spacing-20: 20px;
+    --spacing-32: 32px;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper > section {
+    padding: var(--spacing-20);
+}
+
+/* CARDS SECTION START */
+
+.colored-side {
+    background: url(../images/bg-main-mobile.png);
+    height: 240px;
+}
+
+.cards {
+    width: var(--full-width);
+    color: var(--white-color);
+}
+
+.card {
+    width: 285px;
+    height: 160px;
+    border-radius: var(--default-border-radius);
+}
+
+.card img{
+    width: var(--full-width);
+    height: var(--full-height);
+}
+
+#back-card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 50px;
+}
+
+.card-cvc {
+    position: absolute;
+    top: 40%;
+    left: 80%;
+    font-size: var(--font-size-10);
+}
+
+#front-card {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 110px;
+    z-index: 1;
+}
+
+.card-icon, .card-data > div {
+    position: absolute;
+    z-index: 2;
+}
+
+.card-icon {
+    top: 10%;
+    left: 5%;
+}
+
+.card-data {
+    letter-spacing: 2px;
+}
+
+.card-number {
+    top: 55%;
+    left: 12%;
+    font-weight: lighter;
+}
+
+.cardholder-name {
+    top: 80%;
+    left: 5%;
+    font-size: var(--font-size-10);
+}
+
+.card-date {
+    top: 80%;
+    left: 80%;
+    font-size: var(--font-size-10);
+}
+
+/* CARDS SECTION END */
+
+
+/* FORM SECTION START */
+
+form {
+    max-width: 335px;
+    margin-top: var(--spacing-32);
+    letter-spacing: 1px;
+}
+
+.main-data, .form-submitted {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-submitted {
+    text-align: center;
+    justify-content: center;
+}
+
+form input {
+    padding: var(--spacing-8) var(--spacing-14);
+    border-radius: var(--default-border-radius);
+    border: 2px solid var(--light-gray);
+}
+
+form input[type="submit"], form input[type="button"] {
+    width: var(--full-width);
+    background-color: var(--very-dark-violet);
+    color: var(--white-color);
+}
+
+.flex-row {
+    max-width: 335px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    margin-top: var(--spacing-16);
+    margin-bottom: var(--spacing-32);
+}
+
+.flex-row .expire-data input {
+    width: 85px;
+}
+
+.flex-row .cvc input {
+    width: 150px;
+}
+
+.flex-row .expire-data,  .flex-row .cvc {
+    padding: 0;
+    margin: 0;
+    border:0 none;
+}
+
+fieldset > legend {
+    margin-bottom: var(--spacing-12);
+}
+
+form label {
+    margin-top: var(--spacing-16);
+    margin-bottom: var(--spacing-12);
+}
+
+.form-submitted {
+    display: none;
+}
+
+/* FORM SECTION END */

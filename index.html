@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <link rel="stylesheet" href="css/normalize.css">  <!--or reset.css -->
+  <link rel="stylesheet" href="css/small.css">
+  <link rel="stylesheet" href="css/medium.css">
+  <link rel="stylesheet" href="css/large.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main class="wrapper">
+    <section class="colored-side">
+      <div class="cards">
+        <div class="card" id="front-card">
+          <img src="images/bg-card-front.png" alt="front-card"/>
+
+          <div class="card-icon">
+            <object data="images/card-logo.svg"> </object>
+          </div>
+
+          <div class="card-data">
+            <div class="card-number">0000 0000 0000 0000</div>
+            <div class="cardholder-name">Jane Appleseed</div>
+            <div class="card-date">00/00</div>
+          </div>
+        </div>
+        <div class="card" id="back-card">
+          <img src="images/bg-card-back.png" alt="back-card"/>
+          <p class="card-cvc">000</p>
+        </div>
+      </div>
+    </section>
+    <section class="white-side">
+      <form>
+        <div class="main-data">
+          <label for="name">Cardholder Name</label>
+          <input type="text" id="name" name="name" placeholder="e.g. Jane Appleseed" required>
+
+          <label for="card-num">Card Number</label>
+          <input type="text" id="card-num" name="card-num" placeholder="e.g. 1234 5678 9123 0000" minlength="16" maxlength="16" required>
+
+          <div class="flex-row">
+            <fieldset class="expire-data">
+              <legend>Exp. Date (MM/YY)</legend>
+              <input type="text" class="expire-date" placeholder="MM" minlength="2" maxlength="2" required>
+              <input type="text" class="expire-date" placeholder="YY" minlength="2" maxlength="2" required>
+            </fieldset>
+  
+            <fieldset class="cvc">
+              <legend>CVC</legend>
+              <input type="text" placeholder="e.g. 123" minlength="3" maxlength="3" required>
+            </fieldset>
+          </div>
+        </div>
+
+        <input type="submit" value="Confirm">
+
+        <div class="form-submitted">
+          <div class="success-icon">
+            <object data="images/icon-complete.svg"> </object>
+          </div>
+          <div class="success-title">Thank you!</div>
+          <div class="success-text">We've added your card details</div>
+          <input type="button" value="Continue">
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#"></a>.
+  </div> -->
+
+  <script src="script.js"></script>
+  <noscript>To use this site, please enable JavaScript.</noscript>
+</body>
+</html>

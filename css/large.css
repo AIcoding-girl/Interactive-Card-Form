@@ -1,0 +1,41 @@
+@media only screen and (min-width: 1024px) {
+    .wrapper {
+        flex-direction: row;
+        margin: 0;
+    }
+
+    .colored-side {
+        width: 35%;
+        height: 100vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .white-side {
+        width: 65%;
+    }
+
+    form {
+        position: absolute;
+        top: 25%;
+        left: 55%;
+    }
+
+    .cards {
+        position: absolute;
+        top: 30%;
+        left: 20%;
+    }
+
+    #front-card {
+        position: relative;
+        top: 4%;
+        left: 20px;
+    }
+
+    #back-card {
+        position: relative;
+        top: 30px;
+        left: 6%;
+    }
+}
